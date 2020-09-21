@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * 
+ * print alphabet with a while statement
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -13,7 +13,7 @@ int main(void)
 	az = 'a';
 /*write the funcion with the right syntax in this case using a while loop*/
 	while (az <= 'z')
-	{ 
+	{
 		putchar(az++);
 	}
 	putchar('\n');
