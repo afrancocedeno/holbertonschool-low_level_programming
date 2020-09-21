@@ -11,19 +11,14 @@ int main(void)
 	char az;
 
 	az = 'a';
-	while (az < 'e')
-	{
-		putchar(az++);
-	}
-	while (az < 'q')
-	{
-		putchar(az++);
-	}
 	while (az <= 'z')
 	{
+		if (az == 'e' || az == 'q')
+		{
+			az++;
+		}
 		putchar(az++);
 	}
-
 	putchar('\n');
 	return (0);
 }
