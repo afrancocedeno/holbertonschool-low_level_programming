@@ -1,4 +1,4 @@
-C#include "holberton.h"
+#include "holberton.h"
 
 /**
  * _islower - checcks lower case typw
