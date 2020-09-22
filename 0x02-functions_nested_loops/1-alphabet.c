@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * print_alphabet prototype
- *
+ * print_alphabet - use the prototype for display the alphabet
+ * imports source file 1-main.c
  * Return: Always 0 (Success)
  */
 
