@@ -1,9 +1,8 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
- * _abs -
- * @: as input from sourcefile.c
+ * _abs - displays de absolute number
+ * @a: as input from sourcefile.c
  * Return: statement
  */
 int _abs(int a)
