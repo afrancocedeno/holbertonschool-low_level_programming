@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * 
+ * print_last_digit- function with conditional
  * @d: as input from sourcefile.c
- * Return: 
+ * Return: n value
  */
 int print_last_digit(int d)
 {
@@ -14,11 +14,10 @@ int print_last_digit(int d)
 	{
 		n = -n;
 	_putchar(n + '0');
-	return (n);
 	}
 	else
 	{
 	_putchar(n + '0');
-	return (n);
 	}
+	return (n);
 }
