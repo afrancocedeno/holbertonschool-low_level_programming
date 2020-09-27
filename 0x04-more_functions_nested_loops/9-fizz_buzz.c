@@ -1,6 +1,8 @@
-#include <stdio.h>
+BB#include <stdio.h>
 /**
- *main - entry point void 
+ * main - entry point void
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -13,18 +15,18 @@ int main(void)
 			printf("FizzBuzz");
 		}
 		else if (n % 3 == 0)
-		{		
+		{
 			printf("Fizz");
 		}
 		else if (n % 5 == 0)
 		{
 			printf("Buzz");
-			}
+		}
 		else
 		{
 		printf("%d", n);
 		}
 		putchar(32);
-     	}
+	}
 	return (0);
 }
