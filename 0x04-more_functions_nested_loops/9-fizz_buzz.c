@@ -10,7 +10,7 @@ int main(void)
 	{
 		if (n % 3 == 0 && n % 5 == 0)
 		{
-			printf("FizzBizz");
+			printf("FizzBuzz");
 		}
 		else if (n % 3 == 0)
 		{		
@@ -18,7 +18,7 @@ int main(void)
 		}
 		else if (n % 5 == 0)
 		{
-			printf("Bizz");
+			printf("Buzz");
 			}
 		else
 		{
