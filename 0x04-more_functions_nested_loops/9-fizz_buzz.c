@@ -1,11 +1,10 @@
 #include <stdio.h>
 /**
- *main - 
- *
+ *main - entry point void 
  */
-void main(void)
+int main(void)
 {
-	int n, tres, cinco;
+	int n;
 
 	for (n = 1; n <= 100; n++)
 	{
@@ -27,4 +26,5 @@ void main(void)
 		}
 		putchar(32);
      	}
+	return (0);
 }
