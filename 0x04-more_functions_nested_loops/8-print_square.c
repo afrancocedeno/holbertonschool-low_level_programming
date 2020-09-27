@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 /**
  *print_square - prints a char with an square
  *@size: car inlcuding the size of the square
