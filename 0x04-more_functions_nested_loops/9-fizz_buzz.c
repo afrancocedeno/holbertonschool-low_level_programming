@@ -1,4 +1,4 @@
-BB#include <stdio.h>
+#include <stdio.h>
 /**
  * main - entry point void
  *
@@ -28,5 +28,6 @@ int main(void)
 		}
 		putchar(32);
 	}
+	putchar(10);
 	return (0);
 }
