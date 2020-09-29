@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <string.h>
 
 /**
  * _strlen - entry point function.
@@ -8,8 +7,10 @@
  */
 int _strlen(char *s)
 {
-	int a;
+	int i;
 
-	a = strlen(s);
-	return (a);
+	for (i = 0; s[i] != 0; i++)
+	{
+	}
+	return (i);
 }
