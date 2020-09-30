@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <string.h>
 
 /**
  * _strcpy - entry point function.
@@ -9,11 +10,20 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int i, n;
 
-	for (i = 0; src[i]; i++)
+	n = strlen(src);
+ 
+	if (n <= 2)
 	{
-		dest[i] = src[i];
+		dest = src;
+	}
+	else if (n > 2)
+	{	
+		for (i = 0; src[i]; i++)
+		{
+			dest[i] = src[i];
+		}
 	}
 	return (dest);
 }
