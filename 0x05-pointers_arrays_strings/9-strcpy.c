@@ -14,11 +14,11 @@ char *_strcpy(char *dest, char *src)
 
 	n = strlen(src);
  
-	if (n <= 2)
+	if (n <= 1)
 	{
 		dest = src;
 	}
-	else if (n > 2)
+	else if (n > 1)
 	{	
 		for (i = 0; src[i]; i++)
 		{
