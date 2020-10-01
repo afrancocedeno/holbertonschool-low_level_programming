@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <string.h>
 
 /**
  * rev_string - entry point function.
@@ -12,7 +10,9 @@ void rev_string(char *s)
 	int l, a; /*steps: (l)enght, (a)ssign*/
 	char aux;
 
-	l = strlen(s);
+	for (l = 0; s[l]; l++)
+	{
+	}
 	a = 0;
 	while (a < l)
 	{
