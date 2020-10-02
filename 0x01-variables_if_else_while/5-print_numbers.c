@@ -5,7 +5,7 @@
  * print digit numbers base 10
  * Return - Always 0 (Success)
  */
-void main(void)
+int main(void)
 {
 	int n;
 
@@ -16,4 +16,5 @@ void main(void)
 		n++;
 	}
 	putchar (10);
+	return (0);
 }
