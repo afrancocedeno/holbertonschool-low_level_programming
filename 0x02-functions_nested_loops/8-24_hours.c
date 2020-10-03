@@ -11,9 +11,9 @@ void jack_bauer(void)
 
 	for (H = 0; H <= 2; H++) 
 	{
-		if (h == 2)
+		if (H == 2)
 			x = 3;
-		if (h == 0 || h == 1)
+		if (H <= 1)
 			x = 9;
 		for (h = 0; h <= x; h++)
 		{
@@ -26,7 +26,7 @@ void jack_bauer(void)
 					_putchar(':');
 					_putchar(M + '0');
 					_putchar(m + '0');
-					_putchar('\n');
+					/*_putchar('\n');*/
 				}
 			}
 		}
