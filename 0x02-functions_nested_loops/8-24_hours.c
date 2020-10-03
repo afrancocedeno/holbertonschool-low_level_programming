@@ -1,15 +1,13 @@
 #include "holberton.h"
 
 /**
- * print_last_digit - function with conditional.
- * clock
- * Return: n value.
+ * jack_bauer - entry point funciton
  */
 void jack_bauer(void)
 {
 	int H, h, M, m, x;
 
-	for (H = 0; H <= 2; H++) 
+	for (H = 0; H <= 2; H++)
 	{
 		if (H == 2)
 			x = 3;
@@ -30,5 +28,5 @@ void jack_bauer(void)
 				}
 			}
 		}
-	} 
+	}
 }
