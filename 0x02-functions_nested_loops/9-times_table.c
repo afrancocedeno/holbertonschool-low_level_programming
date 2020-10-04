@@ -6,22 +6,33 @@
  */
 void times_table(void)
 {
-	int line, numbers, p;
+	int lines, numbers, p, aux;
 
-	for (line = 0; line < 9; line++)
+	for (lines = 0; lines < 9; lines++)
 	{
 		for (numbers = 0; numbers <= 9; numbers++)
 		{
-			p = numbers * line;
-			printf("%i", p);
+			p = numbers * lines;
+			aux = (numbers + 1) * lines;
 			if (numbers < 9)
 			{
-				printf("%c", 44);
-				printf("%c", 32);
+				if (aux > 9)
+				{
+					printf("%i", p);
+					printf("%c", 44);
+					printf("%c", 32);
+				}
+				else if (aux <= 9)
+				{
+					printf("%i", p);
+					printf("%c", 44);
+					printf("%c", 32);
+					printf("%c", 32);
+				}
 			}
-			if (p <= 9)
+			else if (numbers == 9)
 			{
-				printf("%c", 32);
+				printf("%i", p);
 			}
 		}
 		printf("%c", 10);
