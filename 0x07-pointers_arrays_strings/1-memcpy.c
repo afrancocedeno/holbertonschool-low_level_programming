@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * _memset - fills memory with a constant byte.
- * @s: input variable, Where to put the data.
- * @b: input variable, What data is gonna be putted.
+ * _memcpy - fills memory with a constant byte.
+ * @dest: input variable, Where to copy.
+ * @src: input variable, What data is gonna be copyied.
  * @n: input variable, Whay ammount of data putted.
  * Return: pointer to memory area s.
  */
