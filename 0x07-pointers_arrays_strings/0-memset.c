@@ -5,7 +5,7 @@
  * @s: input variable, Where to put the data.
  * @b: input variable, What data is gonna be putted.
  * @n: input variable, Whay ammount of data putted.
- * Return: Non void function, 0 (succes).
+ * Return: pointer to memory area s.
  */
 char *_memset(char *s, char b, unsigned int n)
 {
@@ -16,5 +16,5 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 		*(s + i) = b;
 	}
-	return (0);
+	return (s);
 }
