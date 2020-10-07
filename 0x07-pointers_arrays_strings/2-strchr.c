@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdio.h>
 
 /**
@@ -18,7 +18,7 @@ char *_strchr(char *s, char c)
 		else if (*(s + i + 1) == '\0')
 			return (NULL);
 	}
-	if (*(s + i + 1) == '\0')
-	return (s + i);
+	if (c == '\0')
+		return (s + i);
 }
 
