@@ -9,49 +9,34 @@
  */
 int main(int argc, char **argv)
 {
-	int i, coins = 0, reminder = atoi(*(argv + 1));
+	int i, coins = 0, reminder, array[5] = {25, 10, 5, 2, 1};
 
-	if (argc == 2)
-	{
-		if (atoi(*(argv + 1)) < 0)
-			printf("0\n");
-		else
-		{
-			for (i = 0; reminder != 0; i++)
-			{
-				if (reminder > 24)
-				{
-					reminder -= (25);
-					coins += (1);
-				}
-				else if (reminder > 9 && reminder < 25)
-				{
-					reminder -= (10);
-					coins += (1);
-				}
-				else if (reminder > 4 && reminder < 10)
-				{
-					reminder -= (5);
-					coins += (1);
-				}
-				else if (reminder > 1 && reminder < 2)
-				{
-					reminder -= (2);
-					coins += (1);
-				}
-				else if (reminder > 0 && reminder < 1)
-				{
-					reminder -= (1);
-					coins += (1);
-				}
-			}
-			printf("%d\n", coins);
-		}
-	}	
-	else
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	return (0);
+	else
+	{
+		reminder = atoi(*(argv + 1));
+		if (atoi(*(argv + 1)) < 0)
+			printf("0\n");
+		else
+		{
+			for (i = 0; i < 5; i++)
+			{
+				while (reminder >= array[i])
+				{
+					reminder -= array[i];
+					coins += (1);
+				}
+				if (reminder == 0)
+				{
+					printf("%d\n", coins);
+					return (0);
+				}
+			}
+		}
+		return (0);
+	}
 }
