@@ -11,8 +11,8 @@ int main(int argc, char **argv)
 {
 	int coins = 0, reminder = atoi(*(argv + 1));
 
-/*	if (atoi(*(argv + 1)) < 0)
-	return (0);*/
+	if (atoi(*(argv + 1)) < 0)
+	return (0);
 	if (argc != 2)
 	{
 		printf("Error\n");
