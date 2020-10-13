@@ -18,8 +18,10 @@ char *_strdup(char *str)
 		return (NULL);
 	for (i = 0; i < l; i++)
 	{
-		*(pointer + i) = *(str + i);
+/*		*(pointer + i) = *(str + i);*/
+		pointer[i] = str[i];
 	}
-	*(pointer + i) = '\0';
+/*	*(pointer + i) = '\0';*/
+	pointer[i] = '\0';
 	return (pointer);
 }
