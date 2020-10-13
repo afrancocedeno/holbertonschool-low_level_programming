@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * _strdup - Entry point function.
@@ -13,6 +12,7 @@ char *_strdup(char *str)
 	char *pointer;
 
 	for (l = 0; *(str + l) !=  '\0'; l++)
+		;
 	pointer = malloc(sizeof(*str) * l);
 	if (str == NULL)
 		return (NULL);
