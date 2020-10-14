@@ -13,9 +13,9 @@ char *str_concat(char *s1, char *s2)
 	char *pointer = NULL;
 
 	if (s1 == NULL)
-		*s1 = '\0';
+		s1 = "";
 	if (s2 == NULL)
-		*s2 = '\0';
+		s2 = "";
 	for (l1 = 0; *(s1 + l1); l1++)
 		;
 	for (l2 = 0; *(s2 + l2); l2++)
