@@ -7,9 +7,9 @@
  */
 void *malloc_checked(unsigned int b)
 {
-/*	void *pointer = NULL;*/
-	if (b(int))
-		int *pointer = (int *) malloc(sizeof(b));
+	void *pointer = NULL;
+/*	if ( typeof (b) == char)*/
+		char *pointer = (char *) malloc(sizeof(b));
 /*	if (pointer == NULL)
 	exit (98);*/
 	return (pointer);
