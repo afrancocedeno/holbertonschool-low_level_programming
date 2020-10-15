@@ -1,24 +1,22 @@
 #include <stdlib.h>
 #include "holberton.h"
-#include <string.h>
-#include <stdio.h>
 
 /**
  * string_nconcat - entry point function.
  * @s1: input variable, first string.
  * @s2: input variable, second string.
  * @n: input variable, first n bytes of s2.
- * Return: pointer.
+ * Return: pointer with heap memory address.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *pointer = NULL;
 	unsigned int i, j, l1, l2;
 	
-	l1 = strlen(s1);
-	printf("%i\n", l1);
-	l2 = strlen(s2);
-	printf("%i\n", l2);
+	for (l1 = 0; *(s1 + l1) != '\0'; l1++)
+		;
+	for (l2 = 0; *(s2 + l2) != '\0'; l2++)
+		;
 	pointer = malloc((sizeof(s1)) + l1 + n);
 	for (i = 0; i < l1; i++)
 		*(pointer + i) = *(s1 + i);
