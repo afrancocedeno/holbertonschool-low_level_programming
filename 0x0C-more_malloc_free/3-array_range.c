@@ -3,9 +3,9 @@
 
 /**
  * array_range - entry point function.
- * @min: input variable, .
- * @max: input variable, .
- * Return: .
+ * @min: input variable, minimum val.
+ * @max: input variable, maximum val.
+ * Return: pointer with heap address.
  */
 
 int *array_range(int min, int max)
