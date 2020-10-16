@@ -13,8 +13,8 @@ int *array_range(int min, int max)
 	int i;
 	int *array = NULL;
 
-	array = malloc(sizeof(int) * (max - min));
-	for(i = 0; i <= (max - min); i++)
+	array = malloc(sizeof(int) * (max - min + 1));
+	for(i = min; i <= max; i++)
 		*(array + i) = i;
 	return (array);
 }
