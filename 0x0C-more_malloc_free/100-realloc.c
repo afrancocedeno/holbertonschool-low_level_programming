@@ -2,9 +2,10 @@
 #include "holberton.h"
 
 /**
- * array_range - entry point function.
- * @min: input variable, minimum val.
- * @max: input variable, maximum val.
+ * _realloc - entry point function.
+ * @ptr: address input.
+ * @old_size: input variable, minimum val.
+ * @new_size: input variable, maximum val.
  * Return: pointer with heap address.
  */
 
@@ -16,10 +17,9 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (ptr);
 	else if (new_size == old_size)
 		return (ptr);
-	else
-	{
-		free(ptr);
-		pointer = malloc(new_size);
-		return (pointer);
-	}
+	else if (ptr == NULL)
+		return (NULL);
+	free(ptr);
+	pointer = malloc(new_size);
+	return (pointer);
 }
