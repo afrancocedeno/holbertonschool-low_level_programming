@@ -7,12 +7,13 @@
  * @age: input variable.
  * @owner: input variable
  */
-struct my_dog
+typedef struct my_dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+}dog_t;
+
 /*void init_dog(struct dog *d, char *name, float age, char *owner);
-  void print_dog(struct dog *d);*/
+void print_dog(struct dog *d);*/
 #endif
