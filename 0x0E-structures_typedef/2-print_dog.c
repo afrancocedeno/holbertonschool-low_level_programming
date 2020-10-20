@@ -1,6 +1,11 @@
 #include "dog.h"
 #include <stdio.h>
 
+/**
+ * print_dog - entry point function.
+ * @d: input variable.
+ */
+
 void print_dog(struct dog *d)
 {
 	if (!d)
