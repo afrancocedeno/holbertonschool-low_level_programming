@@ -1,10 +1,11 @@
 #include "function_pointers.h"
 
 /**
- * array_iterator - entry point function.
+ * int_index - entry point function.
  * @array: input variable.
  * @size: intput variable.
- * @action: intput variable.
+ * @cmp: intput variable.
+ * Return: return value for fuction.
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
