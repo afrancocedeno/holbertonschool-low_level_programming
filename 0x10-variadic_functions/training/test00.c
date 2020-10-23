@@ -15,6 +15,7 @@ int add(int args, ...)
 		sum += va_arg(ap, int);
 	va_end(ap);
 	return(sum);
+/*they where all macros, not fuctions*/
 }
 
 int main(void)
