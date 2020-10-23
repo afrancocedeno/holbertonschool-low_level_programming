@@ -9,7 +9,7 @@ void printIntList(int count, ...)
 	va_list list;
 
 	va_start(list, count);
-	for (i = 0; i <= count; i++)
+	for (i = 0; i < count; i++)
 	{
 		int num = va_arg(list, int);
 		printf("%d: %d\n", i, num);
@@ -17,7 +17,7 @@ void printIntList(int count, ...)
 	va_end(list);
 }
 
-int main()
+int main(void)
 {
 	printIntList(4, 6, 2, 1, 7);
 	return (0);
