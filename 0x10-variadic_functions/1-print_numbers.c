@@ -7,25 +7,19 @@
  *
  */
 
-/*function ptype, (...) - i´m passing a variable number of arguments*/
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-/*define variable list variable*/
-	unsigned int i;
+	unsigned int i = 0;
 	va_list list;
 
-/*macros for begin and finish the arguments*/
 	va_start(list, n);
-/*process and actions*/
 	for (i = 0; i < n; i++)
 	{
-		unsigned int n = va_arg(list, unsigned int);
-		if (i < n - 1)
-			printf("%d%s", n, separator);
-		if (i == n - 1)
-			printf("%d\n", n);
+		printf("%d", va_arg(list, unsigned int));
+		if (i + 1 < n)
+			printf("%s", separator);
+		else if (i + 1 == n)
+			printf("\n");
 	}
 	va_end(list);
-/*they where all macros, not fuctions*/
-
 }
