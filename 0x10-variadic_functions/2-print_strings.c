@@ -18,6 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		char *pointer = va_arg(list, unsigned int);
+
 		for (j = 0; *(pointer + j) != '\0'; j++)
 			printf("%c", *(pointer + j));
 		if (i + 1 < n && separator)
