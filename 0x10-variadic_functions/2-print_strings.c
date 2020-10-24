@@ -3,8 +3,9 @@
 #include "variadic_functions.h"
 
 /**
- * 
- *
+ * print_strings - input function.
+ * @separator: input variable.
+ * @n: input variable.
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
@@ -19,7 +20,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		char *pointer = va_arg(list, unsigned int);
 		for (j = 0; *(pointer + j) != '\0'; j++)
 			printf("%c", *(pointer + j));
-		if (i + 1 < n)
+		if (i + 1 < n && separator)
 			printf("%s", separator);
 		else if (i + 1 == n)
 			printf("\n");
