@@ -24,10 +24,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%c", *(pointer + j));
 		else
 			printf("nill");
-		if((i + 1 < n) && separator != NULL)
+		if ((i + 1 < n) && separator)
 			printf("%s", separator);
-		else if (i + 1 == n)
-			printf("\n");
 	}
+	printf("\n");
 	va_end(list);
 }
