@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "variadic_functions.h"
+/*#include <stddef.h>*/
 
 /**
  * print_strings - input function.
@@ -23,7 +24,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			for (j = 0; *(pointer + j) != '\0'; j++)
 				printf("%c", *(pointer + j));
 		else
-			printf("nill");
+			printf("(nill)");
 		if ((i + 1 < n) && separator)
 			printf("%s", separator);
 	}
