@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "lists.h"
 #include <stdio.h>
 
@@ -9,11 +10,11 @@
 
 size_t print_list(const list_t *h)
 {
-	int i = 0;
+	size_t i = 0;
 
 	while (!h)
 	{
-		printf("[%d] %s", len, h->str);
+		printf("[%d] %s",h->len, h->str);
 		h = h->next;
 		i++;
 	}	
