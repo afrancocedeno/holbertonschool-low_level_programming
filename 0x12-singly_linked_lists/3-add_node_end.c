@@ -25,15 +25,18 @@ unsigned int _strlen(const char *str)
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new = NULL, *last = *head;
-
+	/*memory allocation for each node*/
 	new = malloc(sizeof(list_t));
 	if (!new)
 		return (NULL);
+/*new node data asignation*/
 	(*new).str = strdup(str);
 	(*new).len = _strlen(str);
-	(*new).next = *head;
+/*new node link asignation*/
+	(*new).next = NULL;
 	while ((*last).next != NULL)
 		last = (*last).next;
-	(*new).next = last;
+/*previous node link to new node*/
+	*head = new;
 	return (*head);
 }
