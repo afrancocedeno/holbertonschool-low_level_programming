@@ -33,7 +33,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	/*link my node to the end of the list*/
 	(*new).next = NULL;
 /*the first node asign new node to first and return*/	
-	if (head == NULL)
+	if (*head == NULL)
 	{
 		*head = new;
 		return (*head);
