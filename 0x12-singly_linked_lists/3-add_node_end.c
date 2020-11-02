@@ -24,7 +24,8 @@ unsigned int _strlen(const char *str)
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new = NULL;
+/*an auxiliar node to reference the prevous node*/
+	list_t *new = NULL, *back = *head;
 
 	new = malloc(sizeof(list_t));
 	
@@ -38,10 +39,10 @@ list_t *add_node_end(list_t **head, const char *str)
 		*head = new;
 		return (*head);
 	}
-/*evaluate head in next node againts NULL*/
-	while ((**head).next != NULL)
+/*evaluate back in next node againts NULL*/
+	while ((*back).next != NULL)
 /*LINK HEAD TO THE NEXT NODE*/
-		*head = (**head).next;
-	(**head).next = new;
-	return (new);
+		back = (*back).next;
+	(*back).next = new;
+	return (*head);
 }
