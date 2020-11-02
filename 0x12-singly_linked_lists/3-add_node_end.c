@@ -28,6 +28,8 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *new = NULL, *back = *head;
 
 	new = malloc(sizeof(list_t));
+	if (!new)
+		return (NULL);
 	(*new).str = strdup(str);
 	(*new).len = _strlen(str);
 	/*link my node to the end of the list*/
@@ -39,7 +41,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (*head);
 	}
 /*evaluate back in next node againts NULL*/
-	while ((*back).next != NULL)
+	while ((*back).next)
 /*LINK HEAD TO THE NEXT NODE*/
 		back = (*back).next;
 	(*back).next = new;
