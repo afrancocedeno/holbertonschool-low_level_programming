@@ -24,19 +24,24 @@ unsigned int _strlen(const char *str)
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new = NULL, *last = *head;
-	/*memory allocation for each node*/
+	list_t *new = NULL;
+
 	new = malloc(sizeof(list_t));
-	if (!new)
-		return (NULL);
-/*new node data asignation*/
+	
 	(*new).str = strdup(str);
 	(*new).len = _strlen(str);
-/*new node link asignation*/
+	/*link my node to the end of the list*/
 	(*new).next = NULL;
-	while ((*last).next != NULL)
-		last = (*last).next;
-/*previous node link to new node*/
-	*head = new;
-	return (*head);
+/*the first node asign new node to first and return*/	
+	if (head == NULL)
+	{
+		*head = new;
+		return (*head);
+	}
+/*evaluate head in next node againts NULL*/
+	while ((**head).next != NULL)
+/*LINK HEAD TO THE NEXT NODE*/
+		*head = (**head).next;
+	(**head).next = new;
+	return (new);
 }
