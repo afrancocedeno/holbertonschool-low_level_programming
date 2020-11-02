@@ -28,12 +28,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *new = NULL, *back = *head;
 
 	new = malloc(sizeof(list_t));
-	
 	(*new).str = strdup(str);
 	(*new).len = _strlen(str);
 	/*link my node to the end of the list*/
 	(*new).next = NULL;
-/*the first node asign new node to first and return*/	
+/*the first node asign new node to first and return*/
 	if (*head == NULL)
 	{
 		*head = new;
@@ -44,5 +43,5 @@ list_t *add_node_end(list_t **head, const char *str)
 /*LINK HEAD TO THE NEXT NODE*/
 		back = (*back).next;
 	(*back).next = new;
-	return (*head);
+	return (new);
 }
