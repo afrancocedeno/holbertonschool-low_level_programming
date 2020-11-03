@@ -3,7 +3,7 @@
 /**
  * add_nodeint - new node function maker.
  * @head: double pointer that select the new node.
- * @str: input string.
+ * @n: input integer.
  *
  * Return: brings back the addres of the new element.
  */
