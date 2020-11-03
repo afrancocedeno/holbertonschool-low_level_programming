@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_node - new node function maker.
+ * add_nodeint - new node function maker.
  * @head: double pointer that select the new node.
  * @str: input string.
  *
