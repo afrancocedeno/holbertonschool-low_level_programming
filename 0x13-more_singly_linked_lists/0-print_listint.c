@@ -6,18 +6,14 @@
  * Return: number of times it count a linked list.
  */
 
-size_t print_list(const list_t *h)
+size_t print_listint(const listint_t *h)
 {
 	size_t i = 0;
 
 	while (h)
 	{
-		if (!(*h).str)
-			printf("[0] (nil)\n");
-		else
-		{
-			printf("[%d] %s\n", h->len, h->str);
-		}
+		printf("%d\n", h->n);
+		
 		h = h->next;
 		i++;
 	}
