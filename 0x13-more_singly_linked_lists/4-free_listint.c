@@ -6,13 +6,14 @@
  */
 void free_listint(listint_t *head)
 {
-/*	listint_t *pointer = *head;
+	listint_t *ptr = NULL, *auxptr = NULL;
 
-	while ((*pointer).next != NULL)
+	*ptr = *head;/*declare a pointer to the head of the list*/
+
+	while ((*ptr).next != NULL)
 	{
-		free;
-		*(head).next;
-		}*/
-	if (head == NULL)
-		printf("list is empty\n");
+		ptr = (*auxptr).next;
+		free(ptr);
+		*ptr = *auxptr;
+	}
 }
