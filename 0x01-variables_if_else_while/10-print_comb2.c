@@ -7,19 +7,19 @@
  */
 int main(void)
 {
-	char ones_index = '0', tens_index = '0';
+	int ones_index = 48, tens_index = 48;
 
-	while (tens_index <= '9')
+	while (tens_index <= 57)
 	{
 		if (ones_index == 58)
 		{
 			tens_index++;
-			ones_index = '0';
+			ones_index = 48;
 		}
 		putchar(tens_index);
 		putchar(ones_index);
 		ones_index++;
-		if (tens_index == '9' && ones_index == '9')
+		if (tens_index == 57 && ones_index == 57)
 		{
 			putchar(44);
 			putchar(32);
