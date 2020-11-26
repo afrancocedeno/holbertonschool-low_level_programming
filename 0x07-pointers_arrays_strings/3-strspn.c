@@ -2,26 +2,22 @@
 #include <string.h>
 
 /**
- * _strspn - function that calculates the lenght of a prefix substring 
- * 
+ * _strspn - function that calculates the lenght of a prefix substring
+ *
  * @s: string to be compare.
  * @accept: string containing the chars to match.
  * Return: unsigned int with the length of the prefix string.
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int substring_length = 0, i = 0, j = 0;
-for (; *(s + i) != '\0' ; i++)
-{
-	for (; *(accept + j); j++)
+	unsigned int substring_matches = 1, i = 0, j = 0;
+
+	for (; *(accept + i) != '\0' ; i++)
 	{
-		if (*(s + i) == *(accept + j))
-		{
-			substring_length++;
-		}
+		for (; *(s + j) != '\0'; j++)
+			if (*(s + i) == *(accept + j))
+				substring_matches++;
+		j = 0;
 	}
-}
-	printf("stantard funciton: %d\n", (int)strspn("hello, world", "oleh"));
-	printf("s length: %d, accept length: %d, matches: %d\n", i, j, substring_length);
-	return (substring_length);
+	return (substring_matches);
 }
