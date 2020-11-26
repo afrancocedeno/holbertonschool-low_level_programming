@@ -20,13 +20,13 @@ int main(void)
 		putchar(ones_index);
 		ones_index++;
 		if (tens_index == '9' && ones_index == '9')
-			{
-				putchar(44);
-				putchar(32);
-				putchar(tens_index);
-				putchar(ones_index);
-				break;
-			}
+		{
+			putchar(44);
+			putchar(32);
+			putchar(tens_index);
+			putchar(ones_index);
+			break;
+		}
 		putchar(44);
 		putchar(32);
 	}
