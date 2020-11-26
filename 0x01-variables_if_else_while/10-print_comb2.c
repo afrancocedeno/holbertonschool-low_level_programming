@@ -7,9 +7,29 @@
  */
 int main(void)
 {
-	putchar(44);
-	putchar(32);
-	putchar(10);
+	char ones_index = '0', tens_index = '0';
 
+	while (tens_index <= '9')
+	{
+		if (ones_index == 58)
+		{
+			tens_index++;
+			ones_index = '0';
+		}
+		putchar(tens_index);
+		putchar(ones_index);
+		ones_index++;
+		if (tens_index == '9' && ones_index == '9')
+			{
+				putchar(44);
+				putchar(32);
+				putchar(tens_index);
+				putchar(ones_index);
+				break;
+			}
+		putchar(44);
+		putchar(32);
+	}
+	putchar(10);
 	return (0);
 }
