@@ -9,11 +9,15 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int substring_matches = 0, i = 0, j = 0;
+	unsigned int substring_matches = 0, i = 0, j = 0, s_length = 0, accept_length = 0;
 
-	for (; i <= 4; i++)
+	for (; *(s + s_length) != '\0'; s_length++)
+		;
+	for (; *(accept + accept_length) != '\0'; accept_length++)
+		;
+	for (; i <= accept_length; i++)
 	{
-		for (; j <= 12; j++)
+		for (; j <= s_length; j++)
 			if (*(s + i) == *(accept + j))
 				substring_matches++;
 		j = 0;
