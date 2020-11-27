@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * print_chessboard - function that prints the chessboard.
+ *
+ * @a: input variable pointer.
+ */
 void print_chessboard(char (*a)[8])
 {
 	int i = 0;
