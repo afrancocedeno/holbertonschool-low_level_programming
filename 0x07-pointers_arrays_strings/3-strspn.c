@@ -9,7 +9,8 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int substring_matches = 0, i = 0, j = 0, s_length = 0, accept_length = 0;
+	unsigned int substring_matches = 0, i = 0,
+	j = 0, s_length = 0, accept_length = 0;
 
 	for (; *(s + s_length) != '\0'; s_length++)
 		;
