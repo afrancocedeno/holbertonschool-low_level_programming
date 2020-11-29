@@ -17,13 +17,13 @@ void times_table(void)
 			{
 				if (aux > 9)
 				{
-					_putchar(p);
+					_putchar(p + '0');
 					_putchar(44);
 					_putchar(32);
 				}
 				else if (aux <= 9)
 				{
-					_putchar(p);
+					_putchar(p + '0');
 					_putchar(44);
 					_putchar(32);
 					_putchar(32);
@@ -31,7 +31,7 @@ void times_table(void)
 			}
 			else if (numbers == 9)
 			{
-				_putchar(p);
+				_putchar(p + '0');
 			}
 		}
 		_putchar(10);
