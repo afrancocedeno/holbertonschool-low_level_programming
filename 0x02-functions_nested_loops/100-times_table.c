@@ -2,6 +2,8 @@
 
 /**
  * times_table - entry point function.
+ *
+ * @n: input variablñe to operate.
  */
 void print_times_table(int n)
 {
