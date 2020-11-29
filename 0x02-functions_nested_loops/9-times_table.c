@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * times_table - entry point function.
@@ -18,23 +17,23 @@ void times_table(void)
 			{
 				if (aux > 9)
 				{
-					printf("%i", p);
-					printf("%c", 44);
-					printf("%c", 32);
+					_putchar(p);
+					_putchar(44);
+					_putchar(32);
 				}
 				else if (aux <= 9)
 				{
-					printf("%i", p);
-					printf("%c", 44);
-					printf("%c", 32);
-					printf("%c", 32);
+					_putchar(p);
+					_putchar(44);
+					_putchar(32);
+					_putchar(32);
 				}
 			}
 			else if (numbers == 9)
 			{
-				printf("%i", p);
+				_putchar(p);
 			}
 		}
-		printf("%c", 10);
+		_putchar(10);
 	}
 }
