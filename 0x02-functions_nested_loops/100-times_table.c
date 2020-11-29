@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * times_table - entry point function.
+ * print_times_table - n input times table funcitons.
  *
  * @n: input variablñe to operate.
  */
@@ -9,7 +9,7 @@ void print_times_table(int n)
 {
 	int result = 0, columns = 0, rows = 0;
 
-	if (n >= 0 && n <= 15)
+	while (n >= 0 && n <= 15)
 	{
 		for (; columns <= n; columns++)
 		{
@@ -53,7 +53,5 @@ void print_times_table(int n)
 			rows = 0;
 		}
 	}
-	else
-		_putchar(10);
 }
 
