@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * print_times_table - n input times table funcitons.
@@ -22,9 +23,7 @@ void print_times_table(int n)
 				{
 					if (result > 9 && result <= 99)
 					{
-						_putchar(44);
-						_putchar(32);
-						_putchar(32);
+						printf(",  ");
 						_putchar(result / 10 + '0');
 						_putchar(result % 10 + '0');
 					}
