@@ -22,24 +22,18 @@ void print_times_table(int n)
 				{
 					if (result > 9 && result <= 99)
 					{
-						_putchar(44);
-						_putchar(32);
-						_putchar(32);
+						print_delimiter(2);
 						_putchar(result / 10 + '0');
 						_putchar(result % 10 + '0');
 					}
 					else if (result <= 9)
 					{
-						_putchar(44);
-						_putchar(32);
-						_putchar(32);
-						_putchar(32);
+						print_delimiter(3);
 						_putchar(result + '0');
 					}
 					else if (result > 99)
 					{
-						_putchar(44);
-						_putchar(32);
+						print_delimiter(1);
 						_putchar(result / 100 + '0');
 						_putchar(result / 10 % 10 + '0');
 						_putchar(result % 10 + '0');
@@ -51,4 +45,3 @@ void print_times_table(int n)
 		}
 	}
 }
-
