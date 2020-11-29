@@ -5,35 +5,29 @@
  */
 void times_table(void)
 {
-	int lines, numbers, p, aux;
+ 	int result = 0, columns = 0, rows = 0;
 
-	for (lines = 0; lines < 10; lines++)
+	for (; columns <= 9; columns++)
 	{
-		for (numbers = 0; numbers <= 9; numbers++)
+		for (; rows <= 9; rows++)
 		{
-			p = numbers * lines;
-			aux = (numbers + 1) * lines;
-			if (numbers < 9)
+			result = rows * columns;
+			if (result <= 9)
 			{
-				if (aux > 9)
+				if (rows > 0)
 				{
-					_putchar(p + '0');
 					_putchar(44);
 					_putchar(32);
+					_putchar(result + '0');
 				}
-				else if (aux <= 9)
+				else
 				{
-					_putchar(p + '0');
-					_putchar(44);
-					_putchar(32);
-					_putchar(32);
+					_putchar(result + '0');
 				}
-			}
-			else if (numbers == 9)
-			{
-				_putchar(p + '0');
 			}
 		}
 		_putchar(10);
+		rows = 0;
 	}
+
 }
