@@ -1,3 +1,6 @@
+#ifndef __HOLBERTON_H__
+#define __HOLBERTON_H__
+
 int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
@@ -14,7 +17,7 @@ void print_times_table(int n);
 void print_delimiter(int);
 
 /**
- * print_delimiter - funciton that print delimiters regarding "," and " " (space).
+ * print_delimiter - delimiter funciton for "," and " " (space).
  *
  * @n: input variable with number of spaces.
  */
@@ -26,3 +29,5 @@ void print_delimiter(int n)
 	for (; i < n; i++)
 		_putchar(32);
 }
+
+#endif
