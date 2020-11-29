@@ -11,3 +11,18 @@ void times_table(void);
 int add(int, int);
 void print_to_98(int n);
 void print_times_table(int n);
+void print_delimiter(int);
+
+/**
+ * print_delimiter - funciton that print delimiters regarding "," and " " (space).
+ *
+ * @n: input variable with number of spaces.
+ */
+void print_delimiter(int n)
+{
+	int i = 0;
+
+	_putchar(44);
+	for (; i < n; i++)
+		_putchar(32);
+}
