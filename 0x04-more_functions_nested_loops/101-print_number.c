@@ -37,7 +37,7 @@ void print_number(int n)
 		_putchar(48);
 	l = n;
 	for (; l > 0; i++)
-		l = l /10;
+		l = l / 10;
 	for (k = i; k > 0; k--)
 	{
 		j = n / _pow(10, (k - 1));
