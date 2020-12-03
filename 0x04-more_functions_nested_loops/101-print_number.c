@@ -1,5 +1,12 @@
 #include "holberton.h"
-#include <stdio.h>
+
+/**
+ * _pow - function that return the pow of a number.
+ *
+ * @base: base number input.
+ * @exponent: exponent input.
+ * Return: integer with result.
+ */
 
 int _pow(int base, int exponent)
 {
@@ -12,10 +19,22 @@ int _pow(int base, int exponent)
 
 int _pow(int, int);
 
-int main(void)
+/**
+ * print_number - function that prints number by nomber one by one.
+ *
+ * @n: input variable with number to print.
+ */
+void print_number(int n)
 {
-	int i = 0, j = 0, k = 0, l = 0, n = 23456789;
+	int i = 0, j = 0, k = 0, l = 0;
 
+	if (n < 0)
+	{
+		_putchar(45);
+		n = -n;
+	}
+	else if (n == 0)
+		_putchar(48);
 	l = n;
 	for (; l > 0; i++)
 		l = l /10;
@@ -24,6 +43,4 @@ int main(void)
 		j = n / _pow(10, (k - 1));
 		_putchar((j % 10) + '0');
 	}
-	printf("\n");
-	return (0);
 }
