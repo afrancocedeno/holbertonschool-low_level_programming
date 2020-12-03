@@ -22,7 +22,7 @@ int main(void)
 	for (k = i; k > 0; k--)
 	{
 		j = n / _pow(10, (k - 1));
-		printf("%d", j % 10);
+		_putchar((j % 10) + '0');
 	}
 	printf("\n");
 	return (0);
