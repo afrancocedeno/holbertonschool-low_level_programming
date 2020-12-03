@@ -1,12 +1,22 @@
 #include <stdio.h>
 
+/**
+ * main - entry point function.
+ *
+ * Return: succes 0.
+ */
 int main(void)
 {
-	int number = 1231952, i = 0;
+	long int number = 612852475143;
+	int i = 2;
 
-	for (; i < 10 ; i++)
+	for (; number != 1 ;)
+	{
 		if (number % i == 0)
 			number = number / i;
-	printf("%d\n", number);
+		else
+			i++;
+	}
+	printf("%d\n", i);
 	return (0);
 }
