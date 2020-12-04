@@ -1,47 +1,59 @@
 #include "holberton.h"
 
 /**
- * print_times_table - n input times table funcitons.
+ * print_times_table - Prints the times table
  *
- * @n: input variablñe to operate.
+ * @n: The table to be printed
+ * Return: Void
  */
+
 void print_times_table(int n)
 {
-	int result = 0, columns = 0, rows = 0;
+	int i, j, nm;
 
-	if (n >= 0 && n <= 15)
+	if (n < 0 || n > 15)
 	{
-		for (; columns <= n; columns++)
+		return;
+	}
+	else
+	{
+		for (i = 0; i <= n; i++)
 		{
-			for (; rows <= n; rows++)
+			for (j = 0; j <= n; j++)
 			{
-				result = rows * columns;
-				if (rows == 0)
-					_putchar(result + '0');
+				nm = i * j;
+				if (nm < 10)
+				{
+					_putchar(nm + 48);
+				}
+				else if (nm < 100)
+				{
+					_putchar((nm / 10) + 48);
+					_putchar((nm % 10) + 48);
+				}
 				else
 				{
-					if (result > 9 && result <= 99)
-					{
-						print_delimiter(2);
-						_putchar(result / 10 + '0');
-						_putchar(result % 10 + '0');
-					}
-					else if (result <= 9)
-					{
-						print_delimiter(3);
-						_putchar(result + '0');
-					}
-					else if (result > 99)
-					{
-						print_delimiter(1);
-						_putchar(result / 100 + '0');
-						_putchar(result / 10 % 10 + '0');
-						_putchar(result % 10 + '0');
-					}
+					_putchar((nm / 100) + 48);
+					_putchar(((nm / 10) % 10) + 48);
+					_putchar((nm % 10) + 48);
+				}
+
+				if (j != n)
+				{
+					_putchar(44);
+					_putchar(32);
+				}
+				if ((i * (j + 1)) < 10 && (j != n))
+				{
+					_putchar(32);
+					_putchar(32);
+				}
+				else if ((i * (j + 1)) < 100 && (j != n))
+				{
+					_putchar(32);
 				}
 			}
 			_putchar(10);
-			rows = 0;
 		}
 	}
 }
