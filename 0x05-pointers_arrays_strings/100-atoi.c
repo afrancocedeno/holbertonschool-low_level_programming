@@ -1,27 +1,31 @@
-#include <stdio.h>
+#include "holberton.h"
 
+/**
+ * _atoi -  convert a string to an integer.
+ * @s: string to convert
+ *
+ * Return: the first number in the string
+ */
 int _atoi(char *s)
 {
-	/* 48 - 57 ascii */
-	int auxiliar_string[1024];
-	int i = 0, j = 0, k = 0, a = 0;
+	unsigned int res = 0;
+	int current = 0;
+	int signo = 1;
 
-	for (; s[i] != '\0'; i++)
+	while (*s)
 	{
-		if (s[i] >= 48 && s[i] <= 57)
+		if (*s == '-')
+			signo *= -1;
+		if (*s >= '0' && *s <= '9')
 		{
-			if (s[i - 1] == '-')
-				a = 1;
-			auxiliar_string[j] = s[i];
-			j++;
+			res = res * 10 + *s - '0';
+			if (*(s + 1) < '0' || *(s + i) > '9')
+				break;
 		}
+		s++;
 	}
-	auxiliar_string[j] = '\0';
-	 /*for (i = 0; auxiliar_string[i] != '\0'; i++)
-		printf("%c", *(auxiliar_string + i)); */
-	for (i = 0; auxiliar_string[i]; i++)
-		k = 10 * k + (auxiliar_string[i] - '0');
-	if (a == 1)
-		k = -k;
-	return (k);
+	if (signo < 0)
+		return (current = res * signo);
+	else
+		return (res * signo);
 }
