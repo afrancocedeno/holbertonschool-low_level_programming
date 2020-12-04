@@ -21,6 +21,5 @@ char *cap_string(char *s)
 	|| *(s + i - 1) == 34 || *(s + i - 1) == 40
 	|| *(s + i - 1) == 41 || *(s + i - 1) == 123 || *(s + i - 1) == 125)))
 			*(s + i) -= 32;
-	printf("%s\n", s);
 	return (s);
 }
