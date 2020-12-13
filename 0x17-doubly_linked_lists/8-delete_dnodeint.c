@@ -1,5 +1,12 @@
 #include "lists.h"
 
+/**
+ * delete_dnodeint_at_index - deletes the node at index of linked list.
+ * @head: input variable with list.
+ * @index: input variable with number of node to remove.
+ *
+ * Return: 1 for success -1 if failure.
+ */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *auxiliar_node = *head;
@@ -18,8 +25,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		auxiliar_node = (*auxiliar_node).next;
 	if (!auxiliar_node || !(*auxiliar_node).next)
 		return (-1)
-	/*if (!auxiliar_node)
-		return (-1);*/
+	/*if (!auxiliar_node)*/
+		/*return (-1);*/
 	else if (!(*auxiliar_node).next)
 		(*(*auxiliar_node).prev).next = NULL;
 	else if ((*auxiliar_node).next)
