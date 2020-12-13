@@ -13,12 +13,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *auxiliar_node = *h, *new_node = NULL;
 	unsigned int i = 0;
 
-	if (!*h)
+	if (!h)
 		return (NULL);
 	if (idx == 0)
+	{
 		add_dnodeint(h, n);
-
-	for (; i < idx - 1; i++)
+		return (new_node);
+	}
+	for (; i < idx; i++)
 	{
 		auxiliar_node = (*auxiliar_node).next;
 		if (!auxiliar_node && idx - 1 > i)
