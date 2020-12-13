@@ -12,8 +12,8 @@ void free_dlistint(dlistint_t *head)
 	while ((*pointer).next)
 	{
 		auxiliar_pointer = (*pointer).next;
-		free(pointer);
+		free(auxiliar_pointer);
 		pointer = auxiliar_pointer;
 	}
-	free(auxiliar_pointer);
+	free(pointer);
 }
