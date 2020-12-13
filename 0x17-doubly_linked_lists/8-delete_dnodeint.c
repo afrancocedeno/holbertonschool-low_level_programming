@@ -9,12 +9,13 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *auxiliar_node = *head;
+	dlistint_t *auxiliar_node = NULL;
 	unsigned int i = 0;
 
 	if (!head || !*head)
 		return (-1);
-	else if (index == 0)
+	auxiliar_node = *head;
+	if (index == 0)
 	{
 		*head = (*auxiliar_node).next;
 		(*auxiliar_node).prev = NULL;
