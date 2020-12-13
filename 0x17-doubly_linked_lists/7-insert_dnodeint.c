@@ -27,7 +27,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 		for (; i < idx - 1; i++)
 		{
-			printf("i: %d idx: %d\n", i, idx);
 			if (!(*auxiliar_node).next)
 				return (NULL);
 			auxiliar_node = (*auxiliar_node).next;
