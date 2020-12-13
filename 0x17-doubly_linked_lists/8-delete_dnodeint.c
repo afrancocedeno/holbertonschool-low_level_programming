@@ -23,12 +23,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	for (; i <= index - 1; i++)
 		auxiliar_node = (*auxiliar_node).next;
-	if (!auxiliar_node || !(*auxiliar_node).next)
+	if (!auxiliar_node)
 		return (-1);
-	/*if (!auxiliar_node)*/
-		/*return (-1);*/
-	/*if (!(*auxiliar_node).next)
-		(*(*auxiliar_node).prev).next = NULL;*/
+	else if (!(*auxiliar_node).next)
+		(*(*auxiliar_node).prev).next = NULL;
 	else if ((*auxiliar_node).next)
 	{
 		(*(*auxiliar_node).prev).next = (*auxiliar_node).next;
