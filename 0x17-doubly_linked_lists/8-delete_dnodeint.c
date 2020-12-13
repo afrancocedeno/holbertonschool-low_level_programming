@@ -27,8 +27,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (-1)
 	/*if (!auxiliar_node)*/
 		/*return (-1);*/
-	else if (!(*auxiliar_node).next)
-		(*(*auxiliar_node).prev).next = NULL;
+	/*if (!(*auxiliar_node).next)
+		(*(*auxiliar_node).prev).next = NULL;*/
 	else if ((*auxiliar_node).next)
 	{
 		(*(*auxiliar_node).prev).next = (*auxiliar_node).next;
