@@ -9,11 +9,11 @@ void free_dlistint(dlistint_t *head)
 	dlistint_t *pointer = NULL, *auxiliar_pointer = NULL;
 
 	pointer = head;
-	while ((*pointer).next)
+	while (pointer)
 	{
 		auxiliar_pointer = (*pointer).next;
-		free(auxiliar_pointer);
+		free(pointer);
 		pointer = auxiliar_pointer;
 	}
-	free(pointer);
+	free(auxiliar_pointer);
 }
