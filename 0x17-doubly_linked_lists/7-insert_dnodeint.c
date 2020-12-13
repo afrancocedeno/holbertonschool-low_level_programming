@@ -1,11 +1,18 @@
 #include "lists.h"
 
+/**
+ * insert_dnodeint_at_index - that inserts a new node at a given position.
+ * @h: input variable with list.
+ * @idx: input variable with index on demand.
+ * @n: input variable with data node.
+ *
+ * Return: new node address.
+ */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *auxiliar_node = *h, *new_node = NULL;
 	unsigned int i = 0;
 
-/* if empty list */
 	if (!*h)
 		return (NULL);
 	if (idx == 0)
@@ -26,7 +33,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	(*auxiliar_node).prev = new_node;
 	(*new_node).next = (*auxiliar_node).next;
 	(*auxiliar_node).next = new_node;
-
-
 	return (new_node);
 }
