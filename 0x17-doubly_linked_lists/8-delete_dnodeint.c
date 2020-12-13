@@ -3,15 +3,12 @@
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *auxiliar_node = *head;
+	unsigned int i;
 
-	if (!*head)
-		return (-1);
-	else if (index == 0)
+	for (; i < index; i++)
 	{
-		*head = (*auxiliar_node).next;
-		(*auxiliar_node).prev = NULL;
-		free(auxiliar_node);
-		return (1);
+		auxiliar_node = (*auxiliar_node).next;
 	}
+	free_dlistint(auxiliar_node);
 	return (1);
 }
