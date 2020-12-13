@@ -12,24 +12,24 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 /*an auxiliar node to reference the prevous node*/
 	dlistint_t *new_node = NULL, *back = *head;
 
-	if (!head)
-		return (NULL);
 	new_node = malloc(sizeof(dlistint_t));
 	if (!new_node)
 		return (NULL);
+	if (!head)
 	(*new_node).n = n;
 	/*link my node to the end of the list*/
 	(*new_node).next = NULL;
 	/*the first node asign new_node node to first and return*/
-	if (*head == NULL)
+	if (!*head)
 	{
 		*head = new_node;
 		return (*head);
 	}
 	/*evaluate back in next node againts NULL*/
-	while ((*back).next)
+	while (back && (*back).next)
 	/*LINK HEAD TO THE NEXT NODE*/
 		back = (*back).next;
 	(*back).next = new_node;
+	(*new_node).prev = back;
 	return (new_node);
 }
