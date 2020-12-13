@@ -15,5 +15,5 @@ void free_dlistint(dlistint_t *head)
 		free(pointer);
 		pointer = auxiliar_pointer;
 	}
-	free(pointer);
+	free(auxiliar_pointer);
 }
