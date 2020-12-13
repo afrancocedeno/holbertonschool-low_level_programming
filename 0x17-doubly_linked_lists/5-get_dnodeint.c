@@ -14,12 +14,12 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 	if (!head)
 		return (NULL);
-	while ((*current_node).next)
+	else
 	{
-		if (i == index)
-			return (current_node);
-		current_node = (*current_node).next;
-		i++;
+		for (; current_node; i++)
+			current_node = (*current_node).next;
+		if (index - 1 > i)
+			return (NULL);
 	}
-	return (NULL);
+	return (current_node);
 }
