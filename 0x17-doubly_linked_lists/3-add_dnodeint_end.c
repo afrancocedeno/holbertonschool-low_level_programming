@@ -15,7 +15,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	new_node = malloc(sizeof(dlistint_t));
 	if (!new_node)
 		return (NULL);
-	if (!head)
+	if (head)
 	{
 		(*new_node).n = n;
 		/*link my node to the end of the list*/
