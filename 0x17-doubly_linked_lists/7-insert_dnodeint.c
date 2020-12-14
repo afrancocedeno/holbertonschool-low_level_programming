@@ -31,11 +31,19 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		if (i == idx && !(*new_node).next)
 			return (add_dnodeint_end(h, n));
 		(*new_node).n = n;
-		(*auxiliar_node).prev = new_node;
+		if (auxiliar_node->next)
+			new_node->next = auxiliar_node->next;
+		else
+			new_node->next = NULL;
+		(*(*auxiliar_node).next).prev = new_node;
+		(*auxiliar_node).next = new_node;
+		(*new_node).prev = auxiliar_node;
+		return (new_node);
+/*		(*auxiliar_node).prev = new_node;
 		if ((*auxiliar_node).next)
 			(*new_node).next = (*auxiliar_node).next;
 		else
-			(*auxiliar_node).next = new_node;
+			(*auxiliar_node).next = new_node; */
 	}
 	return (EXIT_SUCCESS);
 }
