@@ -49,5 +49,5 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		(*auxiliar_node).next = new_node;
 		return (new_node);
 	}
-	return (EXIT_SUCCESS);
+	return (NULL);
 }
