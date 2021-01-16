@@ -1,12 +1,16 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set
+ * hash_table_set - function that create a hash.
+ * @ht: hash table reference.
+ * @key: key to add to the node.
+ * @value: value to add to the node.
  *
+ * Return: integer value 1 for succes and 0 for failure.
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *node, *new_node;
+	hash_node_t *node, *auxiliar_node;
 	unsigned long int index = 0;
 
 	node = malloc(sizeof(hash_node_t));
@@ -25,12 +29,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/* if collision ? */
 	if (*((*ht).array) + index)
-		(*node).next = new_node;
+	{
+		head = node;
+		node->next = *((*ht).array + index);
+		*((*ht) + index) = head;
+	}
 	else
-		*((*ht).array + index) = new_node;
+	{
+		*((*ht).array + index) = node;
+		(*node).next = NULL;
+	}
 	(*node).key = strdup(key);
 	(*node).value = strdup(value);
-	(*node).next = NULL;
-
 	return (1);
 }
