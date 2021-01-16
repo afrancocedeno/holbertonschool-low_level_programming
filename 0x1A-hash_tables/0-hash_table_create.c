@@ -14,9 +14,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned int i = 0;
 
 	/* both table size because we are in the array firts */
+
 	table = malloc(sizeof(hash_table_t));
 	if (!table)
 		return (NULL);
+	(*table).size = size;
 
 	/* space memory for pointer to each node */
 	(*table).array = malloc(size * sizeof(hash_node_t *));
