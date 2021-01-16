@@ -1,12 +1,13 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_create - create a hash table from space in memorry initialized to NULL.
+ * hash_table_create - create a hash table from
+ * space in memorry initialized to NULL.
  * @size: size table.
  *
  * Return: pointer to the table.
  */
- hash_table_t *hash_table_create(unsigned long int size)
+hash_table_t *hash_table_create(unsigned long int size)
 {
 	/* create an array */
 	hash_table_t *table;
@@ -18,7 +19,7 @@
 		return (NULL);
 
 	/* space memory for pointer to each node */
-	(*table).array = malloc(size*sizeof(hash_node_t *));
+	(*table).array = malloc(size * sizeof(hash_node_t *));
 	if (!(*table).array)
 	{
 		/* free table if node allocation fails */
