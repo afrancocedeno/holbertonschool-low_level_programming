@@ -17,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!node)
 		return (0);
 
-	new_node = node;
+	auxiliar_node = node;
 
 	if (!key)
 		return (0);
@@ -30,9 +30,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* if collision ? */
 	if (*((*ht).array) + index)
 	{
-		head = node;
-		node->next = *((*ht).array + index);
-		*((*ht) + index) = head;
+		auxiliar_node = node;
+		(*node).next = *((*ht).array + index);
+		*((*ht).array + index) = auxiliar_node;
 	}
 	else
 	{
