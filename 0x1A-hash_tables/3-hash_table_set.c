@@ -39,7 +39,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		*((*ht).array + index) = node;
 		(*node).next = NULL;
 	}
+	(*node).key = malloc(sizeof(hash_node_t));
+	if (!(*node).key)
+		return (0);
 	(*node).key = strdup(key);
+	(*node).value = malloc(sizeof(hash_node_t));
+	if (!(*node).key)
+		return (0);
 	(*node).value = strdup(value);
 	return (1);
 }
