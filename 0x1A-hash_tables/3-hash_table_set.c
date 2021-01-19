@@ -13,7 +13,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node, *auxiliar_node;
 	unsigned long int index = 0;
 
-	if (!ht || !key || !value || *key = "")
+	/* man strcmp funcion for empty string */
+	if (!ht || !key || !value || strcmp("", key) == 0)
 		return (0);
 	node = malloc(sizeof(hash_node_t));
 	if (!node)
