@@ -13,18 +13,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node, *auxiliar_node;
 	unsigned long int index = 0;
 
-	if (!ht)
+	if (!ht || !key || !value || *key = "")
 		return (0);
 	node = malloc(sizeof(hash_node_t));
 	if (!node)
 		return (0);
 
 	auxiliar_node = node;
-
-	if (!key)
-		return (0);
-	if (!value)
-		return (0);
 
 	/* where? -> index */
 	index = key_index((unsigned char *)key, (*ht).size);
