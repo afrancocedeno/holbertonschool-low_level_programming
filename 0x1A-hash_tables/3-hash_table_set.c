@@ -44,7 +44,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	(*node).key = strdup(key);
 	(*node).value = malloc(sizeof(hash_node_t));
-	if (!(*node).key)
+	if (!(*node).value)
 		return (0);
 	(*node).value = strdup(value);
 	return (1);
