@@ -1,0 +1,7 @@
+all: holberton
+
+holberton: holberton.o main.o
+
+holberton.o: holberton.c
+
+main.o: main.c
