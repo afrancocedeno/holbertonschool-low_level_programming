@@ -3,7 +3,7 @@ CFLAGS = -Werror -Wextra -Wall -pedantic
 SRC = main.c holberton.c
 OBJ = $(SRC:%.c=%.o)
 NAME = holberton
-RM = rm
+RM = rm -f
 
 all : $(NAME)
 
@@ -12,18 +12,14 @@ all : $(NAME)
 	$(CC) -c $< -o  $@
 
 $(NAME) : $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean :
-	$(RM) *~
+	$(RM) *~ $(NAME)
 
 oclean :
-	$(RM) *.o
+	$(RM) $(OBJ)
 
-fclean :
-	$(RM) $(clean) $(NAME) $(oclean)
+fclean : clean oclean
 
-fclean : $(RM) -f
-
-re :
-	$(oclean) $(all)
+re : oclean all
