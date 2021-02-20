@@ -1,8 +1,13 @@
-all: holberton
-SRC = main.c holberton.c
+BINARY = holberton
+SRC = holberton.c main.c
+CC = gcc
+CFLAGS = -Werror -Wextra -Wall -pedantic
 
-holberton: $(SRC)
 
-holberton.o: holberton.c
+all: $(BINARY)
 
-main.o: main.c
+holberton:
+	$(CC) $(CFLAGS) $(SRC) -o $(BINARY)
+
+clean:
+	rm -f holberton *.o
