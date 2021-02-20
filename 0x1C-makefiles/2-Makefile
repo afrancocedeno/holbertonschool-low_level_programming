@@ -1,13 +1,15 @@
 CC = gcc
 CFLAGS = -Werror -Wextra -Wall -pedantic
 SRC = holberton.c main.c
-OBJ = holberton.o main.o
+OBJ = $(SRC:%.c=%.o)
 NAME = holberton
 
-all: $(NAME)
+all : $(NAME)
 
-$(NAME):
+# automatic variables
+# $< take file name
+
+%.o : %.c
+	$(CC) -c $< -o $@
+$(NAME) :
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
-
-$(OBJ):
-	$(CC) $()-c
