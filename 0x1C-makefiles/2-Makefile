@@ -8,8 +8,10 @@ all : $(NAME)
 
 # automatic variables
 # $< take file name
+# $@ take objective name
 
 %.o : %.c
 	$(CC) -c $< -o $@
-$(NAME) :
+
+$(NAME) : $(OBJ)
 	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
