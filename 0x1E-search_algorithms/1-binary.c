@@ -2,61 +2,59 @@
 #include <stddef.h>
 #include "search_algos.h"
 
-void print_array(int *array, size_t size);
-int recursive_binary_search(int *array, int left, int right, int value);
-
+/**
+ * binary_search - binary seacrh algo
+ * @array: datatype input.
+ * @size: datatype size input.
+ * @value: value to search.
+ *
+ * Return: return index.
+ */
 int binary_search(int *array, size_t size, int value)
 {
-    /* create a key to print from half */
-    size_t left = 0, right = size - 1;
-    int return_value;
+	size_t
+	left = 0,
+	right = size - 1,
+	half = 0
+	;
 
-    if (!array)
-        return (-1);
- 
-    print_array(array, size);
-    return_value = recursive_binary_search(array, 0, size - 1, value);
+	while (left <= right)
+	{
+		half = (left + right) / 2;
 
-    return (return_value);
+		print_array(array, left, right);
+
+		/* value equal to half index */
+		if (value == *(array + half))
+			return (half);
+
+		/* value is in the left half of the array */
+		else if (value < *(array + half))
+			right = half - 1;
+
+		/* value is in the right half of the array */
+		else
+			left = half + 1;
+
+	}
+	return (-1);
 }
 
-int recursive_binary_search(int *array, int left, int right, int value)
+/**
+ * print_array - print function.
+ * @array: input data to print.
+ * @start: input index to start printing.
+ * @end: input index to finish print.
+ */
+void print_array(int *array, size_t start, size_t end)
 {
-    if (right >= left)
-    {
-        int half = (right + left) / 2;
+	/* print first part of the line */
+	printf("Searching in array: ");
 
-        if (array[half] == value)
-        {
-            // printf("\n\n\t == index: %d half: %d\n\n", array[half], half);
-            return half;
-        }
-        if (value < array[half])
-        {
-            print_array(array, half);
-            // printf("\n\n\tindex: %d\n\n", array[half]);
-            return recursive_binary_search(array, left, half - 1, value);
-        }
-        else
-        {
-            print_array(&array[half], right);
-            // printf("\n\n\tindex: %d\n\n", array[half]);
-            return recursive_binary_search(array, half + 1, right, value);
-        }
-    }
-    return (-1);
-}
+	/* print each number in the same line */
+	for (; start < end; start++)
+		printf("%d, ", *(array + start));
 
-void print_array(int *array, size_t size)
-{
-    size_t i = 0;
-    /* print first part of the line */
-    printf("Searching in array: ");
-
-    /* print each number in the same line */
-    for (; i < size - 1; i++)
-        printf("%d, ", array[i]);
-
-    /* print the last number without colon */
-    printf("%d\n", array[i]);
+	/* print the last number without colon */
+	printf("%d\n", *(array + start));
 }
