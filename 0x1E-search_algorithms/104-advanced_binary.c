@@ -44,13 +44,14 @@ int recursive_advanced_binary(int *array, size_t left, size_t right, int value)
 		if (
 			value == *(array + half) &&
 			((half == left) ||
-			(value != *(array + half - 1))))
+			(value != *(array + half - 1)))
+			)
 			return (half);
 
 		/* value is in the left half of the array */
 		/* value can be the same as the half */
-		else if (value < *(array + half))
-			right = half - 1;
+		else if (value <= *(array + half))
+			right = half;
 
 		/* value is in the right half of the array */
 		else
