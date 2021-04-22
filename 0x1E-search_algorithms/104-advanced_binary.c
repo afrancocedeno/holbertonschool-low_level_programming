@@ -4,8 +4,7 @@
 /**
  * advanced_binary - function to call recursion.
  * @array: input datratypé
- * @left: first index.
- * @right: last index
+ * @size: datatpye size.
  * @value: input data to search.
  *
  * Return: the index.
@@ -57,7 +56,6 @@ int recursive_advanced_binary(int *array, size_t left, size_t right, int value)
 	return (-1);
 }
 
-void recursive_print_array(int *array, size_t start, size_t end);
 
 /**
  * print_array - print function.
@@ -74,7 +72,12 @@ void print_array(int *array, size_t start, size_t end)
 	/* print the last number without colon */
 	printf("%d\n", *(array + end));
 }
-	/* print each number in the same line */
+/**
+ * recursive_print_array - print each number in the same line
+ * @array: input data to print.
+ * @start: input index to start printing.
+ * @end: input index to finish print.
+ */
 void recursive_print_array(int *array, size_t start, size_t end)
 {
 	if (start < end)
