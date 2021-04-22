@@ -1,10 +1,15 @@
 #include "search_algos.h"
 #include <stdio.h>
 
-int recursive_advanced_binary(int *array, size_t left,
-size_t right, int value);
-
-
+/**
+ * advanced_binary - function to call recursion.
+ * @array: input datratypé
+ * @left: first index.
+ * @right: last index
+ * @value: input data to search.
+ *
+ * Return: the index.
+ */
 int advanced_binary(int *array, size_t size, int value)
 {
 	size_t left = 0, right = size - 1;
@@ -14,6 +19,15 @@ int advanced_binary(int *array, size_t size, int value)
 	return (recursive_advanced_binary(array, left, right, value));
 }
 
+/**
+ * recursive_advanced_binary - funtion recursion.
+ * @array: input datratypé
+ * @left: first index.
+ * @right: last index
+ * @value: input data to search.
+ *
+ * Return: the index.
+ */
 int recursive_advanced_binary(int *array, size_t left, size_t right, int value)
 {
 	size_t half;
