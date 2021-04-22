@@ -15,6 +15,7 @@ int advanced_binary(int *array, size_t size, int value)
 
 	if (!array)
 		return (-1);
+
 	return (recursive_advanced_binary(array, left, right, value));
 }
 
@@ -37,9 +38,13 @@ int recursive_advanced_binary(int *array, size_t left, size_t right, int value)
 
 		print_array(array, left, right);
 
-		/* value equal to half index */
-		if (value == *(array + half) && (
-			value >= *(array + half - 1) || (value <= *(array + half - 1))))
+		/* value equal to half index only when middle is */
+		/* the left or value is greater than the left value */
+		/* no need to (half == right) cause is asking for first */
+		if (
+			value == *(array + half) &&
+			((half == left) ||
+			(value != *(array + half - 1))))
 			return (half);
 
 		/* value is in the left half of the array */
@@ -48,7 +53,7 @@ int recursive_advanced_binary(int *array, size_t left, size_t right, int value)
 			right = half - 1;
 
 		/* value is in the right half of the array */
-		else if (value >= *(array + half))
+		else
 			left = half + 1;
 
 		return (recursive_advanced_binary(array, left, right, value));
