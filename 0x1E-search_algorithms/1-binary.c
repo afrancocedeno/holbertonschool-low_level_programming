@@ -19,7 +19,7 @@ int binary_search(int *array, size_t size, int value)
 	;
 
 	/* if array does not exist */
-    if (!array)
+	if (!array)
 		return (-1);
 
 	while (left <= right)
